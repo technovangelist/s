@@ -1,2 +1,3 @@
 #!/bin/bash
-OS=$(uname -s`)
+OS=$(uname -s)
+echo $OS
