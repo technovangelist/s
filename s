@@ -6,6 +6,6 @@ fi
 echo $OS
 select level in min max
 do
-echo "You have chosen $OS-$level"
+echo "You have chosen $OS-$LEVEL"
 done
 
