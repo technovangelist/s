@@ -183,7 +183,7 @@ brew cask install ${CASKS[@]}
 
 
 fi
-cat <<EOT >> ~/bin/dopplerget
+cat <<\EOT >> ~/bin/dopplerget
 #!/bin/bash
 doppler secrets get -p $1 -c $2 $3 --plain
 EOT
