@@ -26,11 +26,13 @@ fi
 if ! command -v brew &> /dev/null; then
   fancy_echo "Installing Homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  
 fi
 brew update
 if ! command -v fish &> /dev/null; then
   fancy_echo "Installing Fish"
   brew install fish
+  sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
   chsh -s "$(which fish)"
 fi
 
