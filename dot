@@ -1,0 +1,19 @@
+#!/bin/bash
+OS=$(uname -s)
+if [ "$OS" = "Linux" ]; then
+  OS=$(lsb_release -si)
+fi
+echo $OS
+
+
+if [ "$OS" = "Alpine" ]; then
+  ./dot-apk.sh
+elif [ "$OS" = "Debian" ]; then
+  ./dot-apt.sh
+elif [ "$OS" = "Raspbian" ]; then
+  ./dot-apt.sh
+elif [ "$OS" = "Ubuntu" ]; then
+  ./dot-apt.sh
+else
+  echo "Unknown"
+fi
