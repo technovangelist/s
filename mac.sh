@@ -1,6 +1,9 @@
 #!/bin/bash
 
+if [ ! -f ~/.ssh/id_ed25519 ]; then
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "m@technovangelist.com"
+fi
+
 fancy_echo() {
   local fmt="$1"; shift
 
