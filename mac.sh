@@ -23,7 +23,7 @@ if [ ! -d "$HOME/.config" ]; then
   mkdir "$HOME/.config"
 fi
 
-if command -v brew &> /dev/null; then
+if ! command -v brew &> /dev/null; then
   fancy_echo "Installing Homebrew"
   sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
